@@ -688,6 +688,26 @@
       background-color: rgba(140, 134, 156, 0.2) !important;
     }
 
+    .glass-card {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(20px); 
+      -webkit-backdrop-filter: blur(5px); 
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      transition: all 0.3s ease;
+    }
+
+    .glass-card:hover {
+      backdrop-filter: blur(50px);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px -10px rgba(0,0,0,0.3);
+    }
+
+    [data-theme="dark"] .glass-card {
+      background: rgba(var(--bg-alt-rgb), 0.8);
+      border-color: rgba(255, 255, 255, 0.05);
+    }
   </style>
 </head>
 
@@ -704,7 +724,7 @@
 <aside class="nav-dots">
   <button onclick="scrollToSection('#uslugi')" data-target="#uslugi" aria-label="Услуги" data-bs-toggle="tooltip" title="Услуги"></button>
   <button onclick="scrollToSection('#about')" data-target="#about" aria-label="Почему стоит попробовать?" data-bs-toggle="tooltip" title="О нас"></button>
- <!--  <button onclick="scrollToSection('#quiz')" data-target="#quiz" aria-label="Экспресс оценка" data-bs-toggle="tooltip" title="Тест"></button> -->
+  <button onclick="scrollToSection('#pain-points')" data-target="#pain-points" aria-label="Ваши проблемы и наши решения" data-bs-toggle="tooltip" title="Ваши проблемы и наше решение"></button>
   <button onclick="scrollToSection('#cases')" data-target="#cases" aria-label="Наш опыт и экспертиза" data-bs-toggle="tooltip" title="Кейсы"></button>
   <button onclick="scrollToSection('#servisi')" data-target="#servisi" aria-label="Наши сервисы" data-bs-toggle="tooltip" title="сервисы"></button>
   <button onclick="scrollToSection('#contact')" data-target="#contact" aria-label="Контакты" data-bs-toggle="tooltip" title="Контакты"></button>
@@ -719,14 +739,13 @@
  <div class="scroll-hint1">
   ↓
 </div>
-</section>
-<!-- --> 
+
 <section class="section" id="uslugi">
   <div class="container">
     <div class="row g-5 align-items-start">
       <div class="col-lg-5" data-aos="fade-right">
         <span class="badge bg-primary-subtle text-primary fw-semibold mb-4">Услуга</span>
-        <h1 class="fw-bold mb-3 text-shadow">Комплексное сопровождение проектов в сфере медицины</h1>
+        <h1 class="fw-bold mb-0 text-shadow">Комплексное сопровождение проектов в сфере медицины</h1>
         <p class="text-soft mb-4">
           Ваш цифровой проектный офис
         </p>
@@ -740,6 +759,7 @@
       </div>
     </a>
     <button class="btn btn-primary btn-lg" onclick="scrollToSection('#contact')">Купить</button>
+      <img src="222.png" alt="HOH3" loading="lazy" class="w-100 h-100 object-fit-cover">
       </div>
 
       <div class="col-lg-7" data-aos="fade-left">
@@ -751,7 +771,7 @@
               <span class="badge rounded-pill bg-secondary-subtle text-dark fw-bold">1</span>
               <div>
                 <div class="fw-semibold">Разработка и актуализация календарно-сетевых графиков</div>
-                <small class="text-soft">ИСР, базовый план, критический путь</small>
+                <small class="text-soft"><abbr title="— иерархическая структура работ">ИСР</abbr>, базовый план, критический путь</small>
               </div>
             </div>
             <div class="d-flex align-items-start gap-3 mb-3">
@@ -764,7 +784,7 @@
             <div class="d-flex align-items-start gap-3 mb-3">
               <span class="badge rounded-pill bg-secondary-subtle text-dark fw-bold">3</span>
               <div>
-                <div class="fw-semibold">Митигация рисков</div>
+                <div class="fw-semibold"><abbr title="— это процесс минимизации последствий от возникновения рисков. Он включает выявление потенциальных угроз, оценку их влияния и реализацию стратегий, направленных на управление, устранение или ограничение негативных событий">Митигация</abbr> рисков</div>
                 <small class="text-soft">Выявление рисков, разработка мер по их снижению</small>
               </div>
             </div>
@@ -798,14 +818,14 @@
             <div class="d-flex align-items-start gap-3 mb-3">
               <span class="badge rounded-pill fw-bold bg-primary-subtle text-primary ">B</span>
               <div>
-                <div class="fw-semibold">Поддержка по ПП РФ 1875</div>
+                <div class="fw-semibold">Поддержка по <abbr title="Постановление Правительства Российской Федерации от 23 декабря 2024 г. N 1875 “О мерах по предоставлению национального режима при осуществлении закупок товаров, работ, услуг для обеспечения государственных и муниципальных нужд, закупок товаров, работ, услуг отдельными видами юридических лиц”"> ПП РФ 1875 </abbr></div>
                 <small class="text-soft">Включение в национальный режим для участия в государственных закупках</small>
               </div>
             </div>
             <div class="d-flex align-items-start gap-3 mb-3">
               <span class="badge rounded-pill fw-bold bg-primary-subtle text-primary ">C</span>
               <div>
-                <div class="fw-semibold">Поддержка по ПП РФ 719</div>
+                <div class="fw-semibold">Поддержка по <abbr title="Постановление Правительства РФ от 17 июля 2015 г. N 719 “О подтверждении производства российской промышленной продукции”"> ПП РФ 719 </abbr> </div>
                 <small class="text-soft">Подтверждение производства российской промышленной продукции для участия в государственных закупках</small>
               </div>
             </div>
@@ -817,6 +837,102 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="pain-points">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-9" data-aos="fade-up">
+        <h1 class="fw-bold mb-4 text-shadow">Частые проблемы, с которыми сталкиваются проектные команды</h1>
+        <p class="text-soft mb-5">
+          Комплексное сопровождение помогает избежать рисков и повысить эффективность реализации проектов
+        </p>
+        <div class="row g-4">
+          <div class="col-md-6" data-aos="fade-right">
+            <div class="card h-100 border-0 shadow-sm glass-card">
+              <div class="card-body p-4">
+                <div class="d-flex align-items-start gap-3 mb-3">
+                  <span class="badge rounded-pill bg-warning-subtle text-warning fw-bold">
+                    <i class="bi bi-calendar2-minus"></i>
+                  </span>
+                  <div>
+                    <h5 class="mb-2">Неэффективное планирование</h5>
+                    <p class="text-muted small">
+                      Отсутствие чёткого графика работ приводит к задержкам, перерасходу бюджета и потере контроля над проектом.
+                    </p>
+                  </div>
+                </div>
+                <p class="small" style="color: rgb(255, 162, 0);">
+                  <strong>Решение:</strong> Внедрение <abbr title="Информационная система управления проектами">ИСУП</abbr>, разработка и актуализация календарно-сетевых графиков, прогнозирование сроков и расчёт временных резервов.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6" data-aos="fade-left">
+            <div class="card h-100 border-0 shadow-sm glass-card">
+              <div class="card-body p-4">
+                <div class="d-flex align-items-start gap-3 mb-3">
+                  <span class="badge rounded-pill bg-warning-subtle text-warning fw-bold">
+                    <i class="bi bi-exclamation-triangle-fill"></i>
+                  </span>
+                  <div>
+                    <h5 class="mb-2">Отсутствие управления рисками</h5>
+                    <p class="text-muted small">
+                      Несистематический подход к выявлению и минимизации рисков увеличивает вероятность провала проекта.
+                    </p>
+                  </div>
+                </div>
+                <p class="small" style="color: rgb(255, 162, 0);">
+                  <strong>Решение:</strong> Разработка мер митигации, постоянный мониторинг рисков и внедрение стратегий снижения их влияния.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6" data-aos="fade-right" data-aos-delay="100">
+            <div class="card h-100 border-0 shadow-sm glass-card">
+              <div class="card-body p-4">
+                <div class="d-flex align-items-start gap-3 mb-3">
+                  <span class="badge rounded-pill bg-warning-subtle text-warning fw-bold">
+                    <i class="bi bi-eye-slash"></i>
+                  </span>
+                  <div>
+                    <h5 class="mb-2">Низкая прозрачность процессов</h5>
+                    <p class="text-muted small">
+                      Отсутствие визуализации прогресса и отчётов затрудняет контроль за выполнением задач.
+                    </p>
+                  </div>
+                </div>
+                <p class="small" style="color: rgb(255, 162, 0);">
+                <strong>Решение:</strong> Дашборды, автоматизированные отчёты и цифровой архив проектной документации.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-6" data-aos="fade-left" data-aos-delay="100">
+  <div class="card h-100 border-0 shadow-sm glass-card">
+    <div class="card-body p-4">
+      <div class="d-flex align-items-start gap-3 mb-3">
+        <span class="badge rounded-pill bg-warning-subtle text-warning fw-bold">
+          <i class="bi bi-gear-fill"></i>
+        </span>
+        <div>
+          <h5 class="mb-2">Отсутствие единой методологии</h5>
+          <p class="text-muted small">
+            Разрозненные процессы и недостаточная документация приводят к неэффективности команды.
+          </p>
+        </div>
+      </div>
+      <p class="small" style="color: rgb(255, 162, 0);">
+        <strong>Решение:</strong> Внедрение стандартов управления проектами, обучение сотрудников и создание единого проектного архива.
+      </p>
+    </div>
+  </div>
+</div>
         </div>
       </div>
     </div>
@@ -859,24 +975,21 @@
           <h4 class="fw-normal mb-5 text-center text-dark">Команда экспертов по разработке медицинских изделий:</h4>
           
           <div class="row g-5">
-
-            <div class="col-md-4 text-st text-start" data-aos="fade-up">
+            <div class="col-md-4 text-st " data-aos="fade-up">
                   <ul class="list-unstyled small text-primary fs-4 text-break">
                     <li>• Анестезиологических</li>
                     <li>• Офтальмологических</li>
                   </ul>
             </div>
 
-
-            <div class="col-md-4 text-start" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-md-4 " data-aos="fade-up" data-aos-delay="100">
                   <ul class="list-unstyled small text-primary fs-4 text-break">
                     <li>• InVitro диагностики</li>
                     <li>• Хирургических</li>
                   </ul>
             </div>
 
-
-            <div class="col-md-4 text-start" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-md-4 " data-aos="fade-up" data-aos-delay="200">
                   <ul class="list-unstyled small text-primary fs-4 text-break">
                     <li>• Реабилитационных</li>
                     <li>• Вспомогательных</li>
@@ -890,7 +1003,7 @@
 
           <div class="row row-cols-1 row-cols-sm-4 g-4 mb-3 p-3">
             <div class="col">
-              <h3 class="display-6 fw-bold text-primary mb-2">TTM x2</h3>
+              <h3 class="display-6 fw-bold text-primary mb-2"><abbr title="Time to Market (TTM) — это метрика, которая показывает, сколько времени требуется для разработки продукта от первоначальной идеи до его выхода на рынок">TTM </abbr> x2</h3>
               <p class="mb-0">сокращение сроков вывода продукта на рынок</p>
             </div>
             <div class="col">
@@ -915,39 +1028,53 @@
     </div>
   </div>
 </section>
-<!--
-<section class="section" id="quiz">
-  <div class="container">
-    <h2 class="fw-bold mb-4 text-center text-shadow"> <span class="badge bg-primary-subtle text-primary fw-semibold mb-4">Экспресс</span> Оценка зрелости проектного управления компании</h2>
-    
-    <div class="quiz-container mt-5">
-      <div id="left-column">
-        <div id="questions-section"></div>
 
-        <div id="result-section" style="display: none;">
-          <div class="card p-4 h-100">
-            <h4 class="text-center mb-4" id="maturity-level"></h4>
-            <div id="recommendations"></div>
-            <button id="restart-btn" class="btn btn-outline-primary w-100 mt-4">Пройти заново</button>
-          </div>
-        </div>
-      </div>
-      
-      <div id="chart-section" class="sticky-top">
-        <canvas id="radar-chart" width="800" height="800"></canvas>
-      </div>
-    </div>
-  </div>
-</section>
--->
 <section class="section" id="cases">
   <div class="container">
     <h2 class="text-center fw-bold mb-5 text-shadow" data-aos="fade-up">Наш опыт и экспертиза</h2>
 
+    <div class="swiper clients-swiper swiper-container mb-5">
+      <h4 class="text-center fw-normal text-secondary mb-4">Кейсы с клиентами</h4>
+      <div class="swiper-wrapper">
+
+          <div class="swiper-slide" data-aos="flip-left">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <img src="images/38.png" alt="АСВОМЕД" loading="lazy" style="width: 65%; display: block; margin: 0 auto;">
+              <h6 class="mt-3">ООО «Асвомед»</h6>
+              <p class="small">Комплексное сопровождение проекта по разработке медицинского изделия</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide" data-aos="flip-left" data-aos-delay="100">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <img src="images/11.png" alt="УПЗ" loading="lazy" style="width: 60%; display: block; margin: 0 auto;">
+              <h6 class="mt-3">АО «УПЗ»</h6>
+              <p class="small">Комплексное сопровождение проекта по разработке линейки медицинских аппаратов</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide" data-aos="flip-left" data-aos-delay="200">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <img src="images/5.png" alt="ИМС" loading="lazy" style="width: 65%; display: block; margin: 0 auto;">
+              <h6 class="mt-3">ООО «ИМС»</h6>
+              <p class="small">Разработка и внедрение цифрового проектного офиса с последующим обучением</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
     <div class="swiper events-swiper swiper-container">
       <h4 class="text-center fw-normal text-secondary mb-4">Выступления и вебинары</h4>
       <div class="swiper-wrapper">
-
+        
         <div class="swiper-slide" data-aos="flip-left">
           <div class="card shadow-sm h-100 bg-white border-0 rounded-4" style="margin-bottom: 20px">
             <div class="image-container mb-1 overflow-hidden">
@@ -959,9 +1086,8 @@
             </div>
           </div>
         </div>
-        
-        <div class="swiper-slide" data-aos="flip-left">
 
+        <div class="swiper-slide" data-aos="flip-left">
           <div class="card shadow-sm h-100 bg-white border-0 rounded-4" style="margin-bottom: 20px">
             <div class="image-container mb-1 overflow-hidden">
               <img src="images/25.jpg" alt="HOH" loading="lazy" class="w-100 h-100 object-fit-cover">
@@ -984,6 +1110,7 @@
             </div>
           </div>
         </div>
+
 
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
@@ -1081,11 +1208,12 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-6" data-aos="fade-right">
-        <h2 class="fw-bold mb-3 text-shadow">Мы свяжемся с вами</h2>
-        <p class="mb-1 mt-1"><a href="mailto:hi@pmadmin.ru">openinnovation@internet.ru</a></p>
+        <h2 class="fw-bold mb-3 text-shadow">Остались вопросы?</h2>
+        <p>Напишите нам</p>
+        <p class="mb-1"><a href="mailto:hi@pmadmin.ru">openinnovation@internet.ru</a></p>
         </div>
       <div class="col-md-6" data-aos="fade-left">
-        <form action="https://formspree.io/f/YOUR-ID" method="POST">
+        <form id="contact-form" method="POST">
           <div class="mb-3">
             <input name="name" class="form-control" placeholder="Ваше имя" required/>
           </div>
@@ -1111,6 +1239,7 @@
           <input type="text" name="_gotcha" style="display:none" />
           <button type="submit" class="btn btn-primary">Отправить</button>
         </form>
+        <div id="form-response" class="mt-3 text-center"></div>
       </div>
     </div>
   </div>
@@ -1130,6 +1259,51 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const form = this;
+  const responseDiv = document.getElementById('form-response');
+  
+  responseDiv.innerHTML = '';
+  form.querySelector('button[type="submit"]').disabled = true;
+  
+  const formData = new FormData(form);
+  const data = {};
+  formData.forEach((value, key) => data[key] = value);
+  
+  fetch('https://formspree.io/f/mldlqjyk', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
+  .then(response => {
+    if (response.ok) {
+      responseDiv.innerHTML = `
+        <div class="alert alert-success">
+          Форма успешно отправлена! Мы свяжемся с вами в ближайшее время.
+        </div>
+      `;
+      form.reset();
+    } else {
+      throw new Error('Ошибка отправки формы');
+    }
+  })
+  .catch(error => {
+    responseDiv.innerHTML = `
+      <div class="alert alert-danger">
+        Произошла ошибка при отправке формы. Пожалуйста, попробуйте позже.
+      </div>
+    `;
+  })
+  .finally(() => {
+    form.querySelector('button[type="submit"]').disabled = false;
+  });
+});
+</script>
 <script>
 const toggleTheme = () => {
   const html = document.documentElement;
@@ -1191,6 +1365,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   updateParallax();
   
+  // Swiper initialization
   const clientsSwiper = new Swiper('.clients-swiper', {
     slidesPerView: 1,
     spaceBetween: 20,
@@ -1253,7 +1428,7 @@ document.querySelector('.scroll-hint1').addEventListener('click', function(e) {
 </script>
 
 <script>
-
+  // Автоматический скролл к "uslugi" при первом движении вниз
   let scrollTriggered = false;
 
   function handleScroll() {
@@ -1272,354 +1447,6 @@ document.querySelector('.scroll-hint1').addEventListener('click', function(e) {
 </script>
 
 <script>
-let openCount = 0;
-
-document.querySelectorAll('#servisi .collapse').forEach(collapse => {
-  collapse.addEventListener('show.bs.collapse', () => {
-    const col = collapse.closest('.col');
-    col.style.alignSelf = 'flex-start';
-    openCount++;
-    
-    if (openCount === 1) {
-      document.querySelector('#servisi .row').style.alignItems = 'flex-start';
-    }
-  });
-
-  collapse.addEventListener('hide.bs.collapse', () => {
-    const col = collapse.closest('.col');
-    
-    setTimeout(() => {
-      col.style.removeProperty('align-self');
-    }, 300); 
-
-    openCount--;
-    
-    if (openCount === 0) {
-      setTimeout(() => {
-        document.querySelector('#servisi .row').style.alignItems = 'stretch';
-      }, 300); 
-    }
-  });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-  const quizConfig = [
-    { 
-      title: "Наличие методологии",
-      options: [
-        "Глоссарий по проектной деятельности",
-        "Положение о системе управления проектами",
-        "Положение о проектном офисе",
-        "Положение об организационно-ролевой структуре",
-        "Политика управления рисками",
-        "Положение об основных процессах управления проектами",
-        "Методика управления изменениями"
-      ]
-    },
-    { 
-      title: "Формализованность бизнес-процессов",
-      options: [
-        "Процессы управления программами",
-        "Процессы управления портфелями проектов",
-        "Процессы управления проектами"
-      ]
-    },
-    { 
-      title: "Организационная структура",
-      options: [
-        "Существует отдельно выделенное подразделение - Проектный офис или подразделение, выполняющее его функции"
-      ]
-    },
-    { 
-      title: "Персонал",
-      options: [
-        "Действует система мотивации проектных команд",
-        "В организации имеются сертифицированные в области проектного управления специалисты",
-        "Действует система непрерывного обучения персонала (обучение/ повышения квалификации, сертификация)",
-        "Есть план обучения персонала проектному управлению"
-      ]
-    },
-    { 
-      title: "Контроль и аудит",
-      options: [
-        "Регулярная работа Проектного комитета",
-        "Система контроля и мониторинга реализации проектов",
-        "Система оценки зрелости проектного управления"
-      ]
-    },
-    { 
-      title: "Риски",
-      options: [
-        "Методология оценки и управления рисками в проектной деятельности",
-        "Наличие постоянного мониторинга, контроля и аудита в части управления рисками"
-      ]
-    },
-    { 
-      title: "Коммуникации",
-      options: [
-        "Информация по проекту доступна всей проектной команде",
-        "Имеется единый архив проектных документов",
-        "Оформляются приказы об открытии проектов и утверждении проектной команды",
-        "Информация об опыте успешных и неуспешных завершённых проектов систематизирована"
-      ]
-    },
-    { 
-      title: "Управление изменениями и улучшениями",
-      options: [
-        "Регламент работы с проектными инициативами",
-        "Система сбора предложений по улучшению с обратной связью",
-        "Наличие системы оценки электронной модели проекта"
-      ]
-    },
-    { 
-      title: "Автоматизация",
-      options: [
-        "Ведется постоянный мониторинг проектов в информационной системе",
-        "Внедрена информационная система для управления проектами",
-        "Имеется электронный реестр проектов и проектных инициатив"
-      ]
-    }
-  ];
-
-  const questionsSection = document.getElementById('questions-section');
-  const restartBtn = document.getElementById('restart-btn');
-  let currentSection = 0;
-  const answers = Array(quizConfig.length).fill(0);
-  
-  const getChartColors = () => {
-    const isDark = document.documentElement.dataset.theme === 'dark';
-    return {
-        backgroundColor: isDark ? 'rgba(188, 50, 237, 0.3)' : 'rgba(188, 50, 237, 0.2)',
-        borderColor: isDark ? 'rgba(188, 50, 237, 1)' : 'rgba(188, 50, 237, 1)',
-        pointBackgroundColor: isDark ? 'rgba(188, 50, 237, 1)' : 'rgba(188, 50, 237, 1)',
-        gridColor: isDark ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.2)',
-        fontColor: isDark ? '#f9fafb' : '#111827'
-    };
-  };
-
-  const colors = getChartColors();
-  const chart = new Chart(document.getElementById('radar-chart').getContext('2d'), {
-    type: 'radar',
-    data: {
-      labels: quizConfig.map(section => {
-        const shortTitles = {
-          "Наличие методологии": "Методология",
-          "Формализованность бизнес-процессов": "Бизнес-процессы",
-          "Организационная структура": "Оргструктура",
-          "Контроль и аудит": "Контроль",
-          "Управление изменениями и улучшениями": "Управление изменениями"
-        };
-        return shortTitles[section.title] || section.title;
-      }),
-      datasets: [{
-        label: 'Уровень зрелости',
-        data: answers,
-        backgroundColor: colors.backgroundColor,
-        borderColor: colors.borderColor,
-        borderWidth: 2,
-        pointBackgroundColor: colors.pointBackgroundColor
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: true,
-      scales: {
-        r: {
-          angleLines: { color: colors.gridColor },
-          grid: { color: colors.gridColor },
-          pointLabels: { color: colors.fontColor },
-          suggestedMin: 0,
-          suggestedMax: 100
-        }
-      }
-    }
-  });
-  
-  window.updateChartColors = () => {
-    const newColors = getChartColors();
-    chart.data.datasets[0].backgroundColor = newColors.backgroundColor;
-    chart.data.datasets[0].borderColor = newColors.borderColor;
-    chart.data.datasets[0].pointBackgroundColor = newColors.pointBackgroundColor;
-    chart.options.scales.r.angleLines.color = newColors.gridColor;
-    chart.options.scales.r.grid.color = newColors.gridColor;
-    chart.options.scales.r.pointLabels.color = newColors.fontColor;
-    chart.update();
-  };
-
-  function generateQuestions() {
-    quizConfig.forEach((section, index) => {
-      const questionBlock = document.createElement('div');
-      questionBlock.className = `question-block card p-4 ${index === 0 ? 'active' : ''}`;
-      questionBlock.dataset.section = index + 1;
-      
-      questionBlock.innerHTML = `
-        <div class="section-title fw-bold fs-5 mb-2">${section.title}</div>
-        <p class="text-muted small mb-3">Укажите все пункты, наиболее точно отражающие текущий уровень развития компании. <br> В случае, если ни один из предложенных вариантов не подходит — нажмите "далее".</p>
-        <ul class="options-list ps-0"></ul>
-        <div class="nav-buttons d-flex justify-content-between mt-4">
-          <button class="btn btn-secondary prev-btn" ${index === 0 ? 'disabled' : ''}>Назад</button>
-          <button class="btn btn-primary next-btn">${index === quizConfig.length - 1 ? 'Завершить' : 'Далее'}</button>
-        </div>
-      `;
-
-      const optionsList = questionBlock.querySelector('.options-list');
-      section.options.forEach(option => {
-        const li = document.createElement('li');
-        li.className = 'option-item mb-2 p-3 rounded';
-        li.textContent = option;
-        li.addEventListener('click', function() {
-          this.classList.toggle('selected');
-        });
-        optionsList.appendChild(li);
-      });
-
-
-      const prevBtn = questionBlock.querySelector('.prev-btn');
-      const nextBtn = questionBlock.querySelector('.next-btn');
-      
-      prevBtn.addEventListener('click', () => {
-        if (currentSection > 0) {
-          saveAnswers();
-          showSection(currentSection - 1);
-        }
-      });
-      
-      nextBtn.addEventListener('click', () => {
-        saveAnswers();
-        if (currentSection < quizConfig.length - 1) {
-          showSection(currentSection + 1);
-        } else {
-          showResults();
-        }
-      });
-
-      questionsSection.appendChild(questionBlock);
-    });
-  }
-
-  restartBtn.addEventListener('click', restartQuiz);
-
-  function showSection(index) {
-    document.querySelector('.question-block.active').classList.remove('active');
-    currentSection = index;
-    document.querySelector(`.question-block[data-section="${index + 1}"]`).classList.add('active');
-    
-
-    document.querySelectorAll('.prev-btn').forEach(btn => {
-      btn.disabled = index === 0;
-    });
-    
-
-    document.querySelectorAll('.next-btn').forEach((btn, i) => {
-      btn.textContent = i === quizConfig.length - 1 ? 'Завершить' : 'Далее';
-    });
-  }
-
-  function saveAnswers() {
-    const selected = document.querySelectorAll(`.question-block[data-section="${currentSection + 1}"] .selected`);
-    answers[currentSection] = (selected.length / quizConfig[currentSection].options.length) * 100;
-    updateChart();
-  }
-
-  function updateChart() {
-    chart.data.datasets[0].data = answers;
-    chart.update();
-  }
-
-  function showResults() {
-    const totalScore = answers.reduce((a, b) => a + b, 0) / answers.length;
-    const levelElement = document.getElementById('maturity-level');
-    const recommendations = document.getElementById('recommendations');
-    
-    if (totalScore < 33) {
-      levelElement.textContent = "Низкий уровень зрелости проектного управления";
-      levelElement.className = "text-center mb-4 text-danger";
-      recommendations.innerHTML = `
-        <h5 class="fw-bold mb-3">Рекомендации по улучшению:</h5>
-        <div class="recommendation-item">
-          <p>Найти функционального заказчика внедрения проектного управления в компании</p>
-        </div>
-        <div class="recommendation-item">
-          <p>Сфокусироваться на базовых процессах (методология, роли, контроль сроков)</p>
-        </div>
-        <div class="recommendation-item">
-          <p>Запустить пилотные проекты с жестким контролем</p>
-        </div>
-        <div class="recommendation-item">
-          <p> <strong>Помните:</strong> важны "быстрые победы" и очевидные преимущества от внедрения проектного управления, уделите внимание поиску сотрудников, заинтересованных во внедрении изменений</p>
-        </div>
-      `;
-    } 
-    else if (totalScore < 66) {
-      levelElement.textContent = "Средний уровень зрелости проектного управления";
-      levelElement.className = "text-center mb-4 text-warning";
-      recommendations.innerHTML = `
-        <h5 class="fw-bold mb-3">Рекомендации по улучшению:</h5>
-        <div class="recommendation-item">
-          <p>Рассмотреть целесообразность осуществления проектной деятельности в информационной системе управления проектами</p>
-        </div>
-        <div class="recommendation-item">
-          <p>На системной основе организовать обучение сотрудников основам проектного управления и работе в информационной системе управления проектами</p>
-        </div>
-        <div class="recommendation-item">
-          <p>Автоматизировать базовые процессы проектного управления</p>
-        </div>
-        <div class="recommendation-item">
-          <p> <strong>Важно:</strong> сфокусируйтесь на описании процессов проектного управления и имплементировании их в существующие бизнес-процессы компании</p>
-        </div>
-      `;
-    }
-    else {
-      levelElement.textContent = "Высокий уровень зрелости проектного управления";
-      levelElement.className = "text-center mb-4 text-success";
-      recommendations.innerHTML = `
-        <h5 class="fw-bold mb-3">Рекомендации по оптимизации:</h5>
-        <div class="recommendation-item">
-          <p>Повысить мотивацию сотрудников через внедрение механизма проектного премирования</p>
-        </div>
-        <div class="recommendation-item">
-          <p>Углубиться в методику управления рисками и изменениями</p>
-        </div>
-        <div class="recommendation-item">
-          <p>Изучить возможности ИИ для решения задач проектного управления</p>
-        </div>
-        <div class="recommendation-item">
-          <p><strong>Важно:</strong> проявлять активность в экспертных сообществах по проектному управлению, изучать лучшие практики для совершенствования собственной системы</p>
-        </div>
-      `;
-    }
-    
-    document.getElementById('questions-section').style.display = 'none';
-    document.getElementById('result-section').style.display = 'block';
-    updateChart();
-  }
-
-  function restartQuiz() {
-    answers.fill(0);
-    
-    document.querySelectorAll('.option-item.selected').forEach(el => {
-      el.classList.remove('selected');
-    });
-    
-    currentSection = 0;
-    showSection(0);
-    updateChart();
-    
-    document.getElementById('questions-section').style.display = 'block';
-    document.getElementById('result-section').style.display = 'none';
-  }
-
-  generateQuestions();
-  
-  document.documentElement.addEventListener('click', (e) => {
-    if (e.target.onclick && e.target.onclick.toString().includes('toggleTheme')) {
-        updateChartColors();
-    }
-  });
-
-});
-</script>
-<script>
   history.scrollRestoration = "manual"; 
 </script>
 
@@ -1632,10 +1459,4 @@ document.addEventListener('DOMContentLoaded', function() {
   })
 </script>
 </body>
-
 </html>
-
-
-
-
-
