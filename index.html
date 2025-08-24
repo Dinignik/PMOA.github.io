@@ -64,7 +64,8 @@
       border: 1px solid var(--border);
     }
     
-    [data-theme="dark"] .bg-primary-subtle.text-primary {
+    [data-theme="dark"] .bg-primary-subtle.text-primary,
+    [data-theme="dark"] .bg-warning-subtle.text-warning {
       background-color: var(--bg-alt) !important;
       border: 1px solid var(--border);
     }
@@ -110,13 +111,17 @@
 
     [data-theme="dark"] h2,
     [data-theme="dark"] h4,
+    [data-theme="dark"] h5,
     [data-theme="dark"] h6,
-    [data-theme="dark"] p,
     [data-theme="dark"] .form-control::placeholder,
     [data-theme="dark"] strong {
       color: var(--text);
     }
     
+    [data-theme="dark"] p {
+      color: var(--text-soft);
+    }
+
     [data-theme="dark"] #maturity-level {
       color: var(--text) !important;
     }
@@ -178,14 +183,14 @@
     }
 
     .image-container {
-      aspect-ratio: 16 / 9; /* Фиксированное соотношение сторон */
+      aspect-ratio: 16 / 9; 
       position: relative;
       border-radius: 12px;
       overflow: hidden;
     }
 
     .image-container img {
-      object-fit: cover; /* Заполняет контейнер без искажений */
+      object-fit: cover; 
       transition: transform 0.3s ease;
     }
 
@@ -195,7 +200,7 @@
       filter: brightness(0.95);
     }
 
-    /* Стили для карточек */
+  
     .clients-swiper .card,
     .events-swiper .card {
       background-color: var(--bg-alt);
@@ -203,7 +208,7 @@
       border-radius: 16px;
       display: flex;
       flex-direction: column;
-      min-height: 350px; /* Минимальная высота для выравнивания */
+      min-height: 350px;
     }
 
     .card-body {
@@ -321,14 +326,14 @@
     
     @media (max-width: 768px) {
       #servisi .row {
-        display: block; /* Отключаем Flexbox */
+        display: block;
         align-items: flex-start;
-        transition: none; /* Отключаем плавность */
+        transition: none;
       }
 
       #servisi .col {
-        width: 100%; /* Полная ширина */
-        flex: none; /* Отключаем Flex */
+        width: 100%;
+        flex: none;
         display: block;
         transition: none;
       }
@@ -347,7 +352,7 @@
       }
 
       .image-container {
-        aspect-ratio: 1 / 1; /* Квадратное изображение на мобилках */
+        aspect-ratio: 1 / 1;
       }
 
       .card-body {
@@ -366,7 +371,7 @@
       padding: .8rem 2rem;
       font-weight: 600;
       letter-spacing: .5px;
-      box-shadow: 0 0px 5px #ecb0ff;
+      box-shadow: 0 0px 4px #372b3a85;
       transition: all 0.25s ease;
       color: white;
     }
@@ -374,7 +379,7 @@
     .btn-primary:hover {
       filter: brightness(1.08);
       transform: translateY(-2px);
-      box-shadow: 0 4px 15px #eeb2ff;
+      box-shadow: 0 4px 8px #0d0a0e41;
     }
 
     .card {
@@ -415,11 +420,11 @@
       animation: bounce 2s infinite, pulse-glow 2s infinite;
       transition: opacity 0.3s;
       z-index: 10;
-      pointer-events: auto; /* Убедитесь, что кликабельна */
+      pointer-events: auto;
     }
 
 
-    /* Анимация пульсации (подсветка) */
+
     @keyframes pulse-glow {
       0%, 100% {
         text-shadow: 0 0 10px rgba(255, 255, 255, 0);
@@ -429,7 +434,7 @@
       }
     }
 
-    /* Анимация скачка (уже есть в вашем коде) */
+
     @keyframes bounce {
       0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
       40% {transform: translateY(-10px);}
@@ -615,7 +620,7 @@
       background-color: rgba(0, 102, 255, 0.2);
     }
 
-        /* Дополнительные стили для секции сервисов */
+
     .servisi-section .card {
       transition: all 0.3s ease;
     }
@@ -650,7 +655,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 1.5rem;
-      align-items: stretch; /* Растягивает все колонки */
+      align-items: stretch; 
       transition: align-items 0.3s ease;
     }
 
@@ -671,37 +676,35 @@
     }
 
     #servisi .card-container {
-      flex: 1; /* Занимает всё пространство колонки */
+      flex: 1; 
       display: flex;
       flex-direction: column;
       transition: none !important;
     }
 
-    /* Светлая тема */
+  
     .bg-primary-subtle {
-      background-color: rgba(254, 173, 234, 0.201) !important; /* Прозрачный акцент */
+      background-color: rgba(254, 173, 234, 0.201) !important; 
     }
 
-    /* Темная тема */
     [data-theme="dark"] .bg-primary-subtle {
-      background-color: rgba(var(--accent-rgb), 0.2) !important; /* Более заметный акцент в темной теме */
+      background-color: rgba(var(--accent-rgb), 0.2) !important; 
     }
 
-    /* Светлая тема */
+  
     .bg-secondary-subtle {
-      background-color: rgba(140, 134, 156, 0.1) !important; /* Используем приглушённый цвет #8c869c */
+      background-color: rgba(140, 134, 156, 0.1) !important;
     }
 
-    /* Темная тема */
     [data-theme="dark"] .bg-secondary-subtle {
-      background-color: rgba(140, 134, 156, 0.2) !important; /* Более контрастный вариант */
+      background-color: rgba(140, 134, 156, 0.2) !important;
     }
 
-    /* Стеклянные карточки */
+
 .glass-card {
-  background: rgba(255, 255, 255, 0.6); /* Прозрачный фон */
-  backdrop-filter: blur(20px); /* Размытие фона */
-  -webkit-backdrop-filter: blur(5px); /* Для Safari */
+  background: rgba(255, 255, 255, 0.6); 
+  backdrop-filter: blur(40px); 
+  -webkit-backdrop-filter: blur(5px);
   border-radius: 24px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -714,11 +717,53 @@
   box-shadow: 0 12px 40px -10px rgba(0,0,0,0.3);
 }
 
-/* Темная тема */
 [data-theme="dark"] .glass-card {
-  background: rgba(var(--bg-alt-rgb), 0.8);
-  border-color: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 255, 255, 0.05) !important;
 }
+
+[data-theme="dark"] .promo-block h3,
+[data-theme="dark"] .text-dark {
+  color: var(--text) !important;
+}
+
+.pain-text {
+  font-size: 85%;
+}
+
+pain-strong {
+  font-weight: bold;
+  color: rgb(255, 162, 0);
+}
+
+.events-swiper .swiper-slide {
+    width: auto !important; /* Позволяем слайдам принимать ширину контента */
+    margin-right: 20px; /* Отступ между изображениями */
+}
+.events-swiper .swiper-slide img {
+    max-width: 100%;
+    max-height: 250px; /* Устанавливаем максимальную высоту. Можно изменить значение. */
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+.events-swiper .swiper-wrapper {
+    transition-timing-function: linear; /* Для равномерной прокрутки */
+}
+
+.logo-container {
+  height: 250px; /* Устанавливаем фиксированную высоту для контейнера. Вы можете изменить это значение. */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem; /* Добавляем небольшой отступ снизу */
+}
+.case-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Этот параметр гарантирует, что изображение полностью поместится в контейнер, не обрезаясь */
+}
+
   </style>
 </head>
 
@@ -736,7 +781,7 @@
   <button onclick="scrollToSection('#uslugi')" data-target="#uslugi" aria-label="Услуги" data-bs-toggle="tooltip" title="Услуги"></button>
   <button onclick="scrollToSection('#pain-points')" data-target="#pain-points" aria-label="Ваши проблемы и наши решения" data-bs-toggle="tooltip" title="Ваши проблемы и наше решение"></button>
   <button onclick="scrollToSection('#about')" data-target="#about" aria-label="Почему стоит попробовать?" data-bs-toggle="tooltip" title="О нас"></button>
- <!-- <button onclick="scrollToSection('#quiz')" data-target="#quiz" aria-label="Экспресс оценка" data-bs-toggle="tooltip" title="Тест"></button> -->
+  <button onclick="scrollToSection('#quiz')" data-target="#quiz" aria-label="Экспресс оценка" data-bs-toggle="tooltip" title="Тест"></button>
   <button onclick="scrollToSection('#cases')" data-target="#cases" aria-label="Наш опыт и экспертиза" data-bs-toggle="tooltip" title="Кейсы"></button>
   <button onclick="scrollToSection('#servisi')" data-target="#servisi" aria-label="Наши сервисы" data-bs-toggle="tooltip" title="сервисы"></button>
   <button onclick="scrollToSection('#contact')" data-target="#contact" aria-label="Контакты" data-bs-toggle="tooltip" title="Контакты"></button>
@@ -772,7 +817,7 @@
       </div>
     </a>
     <button class="btn btn-primary btn-lg" onclick="scrollToSection('#contact')">Купить</button>
-      <img src="images/222.png" alt="HOH3" loading="lazy" class="w-100 h-100 object-fit-cover">
+      <img src="images/222.png" alt="HOH3" loading="lazy" class="w-75 h-75 mt-4 object-fit-cover">
       </div>
 
       <div class="col-lg-7" data-aos="fade-left">
@@ -879,8 +924,8 @@
                     </p>
                   </div>
                 </div>
-                <p class="small" style="color: rgb(255, 162, 0);">
-                  <strong>Решение:</strong> Внедрение <abbr title="Информационная система управления проектами">ИСУП</abbr>, разработка и актуализация календарно-сетевых графиков, прогнозирование сроков и расчёт временных резервов.
+                <p class="pain-text" style="color: rgb(255, 162, 0);">
+                  <pain-strong>Решение:</pain-strong> Внедрение <abbr title="Информационная система управления проектами">ИСУП</abbr>, разработка и актуализация календарно-сетевых графиков, прогнозирование сроков и расчёт временных резервов.
                 </p>
               </div>
             </div>
@@ -899,8 +944,8 @@
                     </p>
                   </div>
                 </div>
-                <p class="small" style="color: rgb(255, 162, 0);">
-                  <strong>Решение:</strong> Разработка мер митигации, постоянный мониторинг рисков и внедрение стратегий снижения их влияния.
+                <p class="pain-text" style="color: rgb(255, 162, 0);">
+                  <pain-strong>Решение:</pain-strong> Разработка мер митигации, постоянный мониторинг рисков и внедрение стратегий снижения их влияния.
                 </p>
               </div>
             </div>
@@ -919,8 +964,8 @@
                     </p>
                   </div>
                 </div>
-                <p class="small" style="color: rgb(255, 162, 0);">
-                <strong>Решение:</strong> Дашборды, автоматизированные отчёты и цифровой архив проектной документации.
+                <p class="pain-text" style="color: rgb(255, 162, 0);">
+                <pain-strong>Решение:</pain-strong> Дашборды, автоматизированные отчёты и цифровой архив проектной документации.
       </p>
     </div>
   </div>
@@ -940,8 +985,8 @@
           </p>
         </div>
       </div>
-      <p class="small" style="color: rgb(255, 162, 0);">
-        <strong>Решение:</strong> Внедрение стандартов управления проектами, обучение сотрудников и создание единого проектного архива.
+        <p class="pain-text" style="color: rgb(255, 162, 0);">
+        <pain-strong>Решение:</pain-strong> Внедрение стандартов управления проектами, обучение сотрудников и создание единого проектного архива.
       </p>
     </div>
   </div>
@@ -988,25 +1033,22 @@
           <h4 class="fw-normal mb-5 text-center text-dark">Команда экспертов по разработке медицинских изделий:</h4>
           
           <div class="row g-5">
-            <!-- Колонка 1 -->
             <div class="col-md-4 text-st " data-aos="fade-up">
-                  <ul class="list-unstyled small text-primary fs-4 text-break">
+                  <ul class="list-unstyled text-primary fs-4 text-break">
                     <li>• Анестезиологических</li>
                     <li>• Офтальмологических</li>
                   </ul>
             </div>
 
-            <!-- Колонка 2 -->
             <div class="col-md-4 " data-aos="fade-up" data-aos-delay="100">
-                  <ul class="list-unstyled small text-primary fs-4 text-break">
+                  <ul class="list-unstyled text-primary fs-4 text-break">
                     <li>• InVitro диагностики</li>
                     <li>• Хирургических</li>
                   </ul>
             </div>
 
-            <!-- Колонка 3 -->
             <div class="col-md-4 " data-aos="fade-up" data-aos-delay="200">
-                  <ul class="list-unstyled small text-primary fs-4 text-break">
+                  <ul class="list-unstyled text-primary fs-4 text-break">
                     <li>• Реабилитационных</li>
                     <li>• Вспомогательных</li>
                   </ul>
@@ -1044,7 +1086,7 @@
     </div>
   </div>
 </section>
-<!--
+
 <section class="section" id="quiz">
   <div class="container">
     <h2 class="fw-bold mb-4 text-center text-shadow"> <span class="badge bg-primary-subtle text-primary fw-semibold mb-4">Экспресс</span> Оценка зрелости проектного управления компании</h2>
@@ -1068,7 +1110,6 @@
     </div>
   </div>
 </section>
--->
 
 <section class="section" id="cases">
   <div class="container">
@@ -1090,7 +1131,15 @@
         <div class="swiper-slide" data-aos="flip-left" data-aos-delay="100">
           <div class="card shadow-sm h-100">
             <div class="card-body">
-              <img src="images/11.png" alt="УПЗ" loading="lazy" style="width: 60%; display: block; margin: 0 auto;">
+              <div class="logo-container">
+              <img
+               src="images/11.png"
+               alt="УПЗ"
+               loading="lazy"
+               class="case-logo"
+               data-light-src="images/11.png"
+               data-dark-src="images/11_dark.png">
+               </div>
               <h6 class="mt-3">АО «УПЗ»</h6>
               <p class="small">Комплексное сопровождение проекта по разработке линейки медицинских аппаратов</p>
             </div>
@@ -1099,7 +1148,15 @@
         <div class="swiper-slide" data-aos="flip-left" data-aos-delay="200">
           <div class="card shadow-sm h-100">
             <div class="card-body">
-              <img src="images/5.png" alt="ИМС" loading="lazy" style="width: 65%; display: block; margin: 0 auto;">
+            <div class="logo-container">
+              <img 
+              src="images/5.png"
+              alt="ИМС" 
+              loading="lazy"
+              class="case-logo"
+              data-light-src="images/5.png"
+              data-dark-src="images/5_dark.png">
+              </div>
               <h6 class="mt-3">ООО «ИМС»</h6>
               <p class="small">Разработка и внедрение цифрового проектного офиса с последующим обучением</p>
             </div>
@@ -1113,51 +1170,40 @@
     </div>
 
     <div class="swiper events-swiper swiper-container">
-      <h4 class="text-center fw-normal text-secondary mb-4">Выступления и вебинары</h4>
-      <div class="swiper-wrapper">
-        
-        <div class="swiper-slide" data-aos="flip-left">
-          <div class="card shadow-sm h-100 bg-white border-0 rounded-4" style="margin-bottom: 20px">
-            <div class="image-container mb-1 overflow-hidden">
-              <img src="images/56.png" alt="HOH3" loading="lazy" class="w-100 h-100 object-fit-cover">
-            </div>
-            <div class="card-body p-3 d-flex flex-column justify-content-between">
-              <h6 class="mb-1">Вебинар</h6>
-              <p class="small text-muted mb-0">Проектное управление: инновации для рыночного лидерства</p>
-            </div>
-          </div>
+    <h4 class="text-center fw-normal text-secondary mb-4">Выступления и вебинары</h4>
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+                <div class="image-container mb-1 overflow-hidden">
+                    <img src="images/56.png" alt="HOH3" loading="lazy" class="w-100 h-100 object-fit-cover">
+                </div>
         </div>
-
-        <div class="swiper-slide" data-aos="flip-left">
-          <div class="card shadow-sm h-100 bg-white border-0 rounded-4" style="margin-bottom: 20px">
-            <div class="image-container mb-1 overflow-hidden">
-              <img src="images/25.jpg" alt="HOH" loading="lazy" class="w-100 h-100 object-fit-cover">
-            </div>
-            <div class="card-body p-3 d-flex flex-column justify-content-between">
-              <h6 class="mb-1">Круглый стол</h6>
-              <p class="small text-muted mb-0">Автоматизация системы управления проектами: как делать больше меньшими ресурсами</p>
-            </div>
-          </div>
+        <div class="swiper-slide">
+                <div class="image-container mb-1 overflow-hidden">
+                    <img src="images/25.jpg" alt="HOH" loading="lazy" class="w-100 h-100 object-fit-cover">
+                </div>
         </div>
-
-        <div class="swiper-slide" data-aos="flip-left">
-          <div class="card shadow-sm h-100 bg-white border-0 rounded-4" style="margin-bottom: 20px">
-            <div class="image-container mb-1 overflow-hidden">
-              <img src="images/9.jpg" alt="HOH2" loading="lazy" class="w-100 h-100 object-fit-cover">
-            </div>
-            <div class="card-body p-3 d-flex flex-column justify-content-between">
-              <h6 class="mb-1">Доклад от эксперта</h6>
-              <p class="small text-muted mb-0">Синергия успеха: как проектное управление способствует ускорению разработки новых продуктов</p>
-            </div>
-          </div>
+        <div class="swiper-slide">
+                <div class="image-container mb-1 overflow-hidden">
+                    <img src="images/9.jpg" alt="HOH2" loading="lazy" class="w-100 h-100 object-fit-cover">
+                </div>
         </div>
-
-
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-pagination"></div>
+        <div class="swiper-slide">
+                <div class="image-container mb-1 overflow-hidden">
+                    <img src="images/56.png" alt="HOH3" loading="lazy" class="w-100 h-100 object-fit-cover">
+                </div>
+        </div>
+        <div class="swiper-slide">
+                <div class="image-container mb-1 overflow-hidden">
+                    <img src="images/25.jpg" alt="HOH" loading="lazy" class="w-100 h-100 object-fit-cover">
+                </div>
+        </div>
+        <div class="swiper-slide">
+                <div class="image-container mb-1 overflow-hidden">
+                    <img src="images/9.jpg" alt="HOH2" loading="lazy" class="w-100 h-100 object-fit-cover">
+                </div>
+        </div>
     </div>
-  </div>
+    </div>
 </section>
 
 <section class="section no-parallax" id="servisi">
@@ -1248,7 +1294,7 @@
 <section class="section no-parallax" id="contact">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-md-6" data-aos="fade-right">
+      <div class="col-md-6 mb-4" data-aos="fade-right">
         <h2 class="fw-bold mb-3 text-shadow">Остались вопросы?</h2>
         <p>Напишите нам</p>
         <p class="mb-1"><a href="mailto:hi@pmadmin.ru">openinnovation@internet.ru</a></p>
@@ -1281,10 +1327,10 @@
           <button type="submit" class="btn btn-primary">Отправить</button>
         </form>
         <div id="form-response" class="mt-3 text-center"></div>
-    <!--    <div class="mt-4 text-center">
+        <div class="mt-4 text-center">
             <button onclick="toggleTheme()" class="btn btn-outline-secondary w-100">
               Сменить тему
-            </button> -->
+            </button> 
         </div>
       </div>
     </div>
@@ -1312,16 +1358,13 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
   const form = this;
   const responseDiv = document.getElementById('form-response');
   
-  // Очистка предыдущих сообщений
   responseDiv.innerHTML = '';
   form.querySelector('button[type="submit"]').disabled = true;
   
-  // Сбор данных формы
   const formData = new FormData(form);
   const data = {};
   formData.forEach((value, key) => data[key] = value);
   
-  // Отправка запроса
   fetch('https://formspree.io/f/mldlqjyk', {
     method: 'POST',
     headers: {
@@ -1354,12 +1397,47 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
 });
 </script>
 <script>
+function applySystemTheme() {
+  const isSystemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  
+  if (isSystemDark) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+  }  
+}
+
 const toggleTheme = () => {
   const html = document.documentElement;
   html.dataset.theme = html.dataset.theme === 'dark' ? 'light' : 'dark';
   localStorage.setItem('theme', html.dataset.theme);
   updateChartColors();
+  updateImagesByTheme();
 };
+
+  function updateImagesByTheme() {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    const images = document.querySelectorAll('img[data-light-src][data-dark-src]');
+    images.forEach(img => {
+      if (isDark) {
+        img.src = img.getAttribute('data-dark-src');
+      } else {
+        img.src = img.getAttribute('data-light-src');
+      }
+    });
+  }
+
+  applySystemTheme();
+  updateImagesByTheme();
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (e.matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+    updateImagesByTheme();
+  });
 
 (() => {
   const saved = localStorage.getItem('theme');
@@ -1414,7 +1492,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   updateParallax();
   
-  // Swiper initialization
+
   const clientsSwiper = new Swiper('.clients-swiper', {
     slidesPerView: 1,
     spaceBetween: 20,
@@ -1437,25 +1515,16 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const eventsSwiper = new Swiper('.events-swiper', {
-    slidesPerView: 1,
+    loop: true,
+    slidesPerView: 'auto',
     spaceBetween: 20,
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
-      },
-      992: {
-        slidesPerView: 3,
-      }
+    centeredSlides: true,
+    speed: 5000,
+    autoplay: {
+        delay: 0,
+        disableOnInteraction: false
     },
-    pagination: {
-      el: '.events-swiper .swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.events-swiper .swiper-button-next',
-      prevEl: '.events-swiper .swiper-button-prev',
-    },
-  });
+});
 });
 
 AOS.init({
@@ -1477,7 +1546,6 @@ document.querySelector('.scroll-hint1').addEventListener('click', function(e) {
 </script>
 
 <script>
-  // Автоматический скролл к "uslugi" при первом движении вниз
   let scrollTriggered = false;
 
   function handleScroll() {
@@ -1501,7 +1569,7 @@ let openCount = 0;
 document.querySelectorAll('#servisi .collapse').forEach(collapse => {
   collapse.addEventListener('show.bs.collapse', () => {
     const col = collapse.closest('.col');
-    col.style.alignSelf = 'flex-start'; // Отключаем растяжку для открытой колонки
+    col.style.alignSelf = 'flex-start';
     openCount++;
     
     if (openCount === 1) {
@@ -1512,17 +1580,17 @@ document.querySelectorAll('#servisi .collapse').forEach(collapse => {
   collapse.addEventListener('hide.bs.collapse', () => {
     const col = collapse.closest('.col');
     
-    // Оставляем align-self на месте, пока не завершится анимация
+
     setTimeout(() => {
       col.style.removeProperty('align-self');
-    }, 300); // Время должно совпадать с длительностью анимации
+    }, 300);
 
     openCount--;
     
     if (openCount === 0) {
       setTimeout(() => {
         document.querySelector('#servisi .row').style.alignItems = 'stretch';
-      }, 300); // Задержка перед возвратом к растяжке
+      }, 300);
     }
   });
 });
@@ -1632,7 +1700,7 @@ document.addEventListener('DOMContentLoaded', function() {
           "Формализованность бизнес-процессов": "Бизнес-процессы",
           "Организационная структура": "Оргструктура",
           "Контроль и аудит": "Контроль",
-          "Управление изменениями и улучшениями": "Управление изменениями"
+          "Управление изменениями и улучшениями": ["Управление", "изменениями"]
         };
         return shortTitles[section.title] || section.title;
       }),
@@ -1654,7 +1722,8 @@ document.addEventListener('DOMContentLoaded', function() {
           grid: { color: colors.gridColor },
           pointLabels: { color: colors.fontColor },
           suggestedMin: 0,
-          suggestedMax: 100
+          suggestedMax: 100,
+          ticks: {backdropColor: 'transparent'}
         }
       }
     }
@@ -1698,7 +1767,6 @@ document.addEventListener('DOMContentLoaded', function() {
         optionsList.appendChild(li);
       });
 
-      // Добавляем обработчики для кнопок навигации
       const prevBtn = questionBlock.querySelector('.prev-btn');
       const nextBtn = questionBlock.querySelector('.next-btn');
       
@@ -1729,12 +1797,10 @@ document.addEventListener('DOMContentLoaded', function() {
     currentSection = index;
     document.querySelector(`.question-block[data-section="${index + 1}"]`).classList.add('active');
     
-    // Обновляем состояние кнопки "Назад"
     document.querySelectorAll('.prev-btn').forEach(btn => {
       btn.disabled = index === 0;
     });
     
-    // Обновляем текст кнопки "Далее"
     document.querySelectorAll('.next-btn').forEach((btn, i) => {
       btn.textContent = i === quizConfig.length - 1 ? 'Завершить' : 'Далее';
     });
@@ -1759,6 +1825,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (totalScore < 33) {
       levelElement.textContent = "Низкий уровень зрелости проектного управления";
       levelElement.className = "text-center mb-4 text-danger";
+      levelElement.style.cssText = 'color: ' + 'red' + ' !important;'
       recommendations.innerHTML = `
         <h5 class="fw-bold mb-3">Рекомендации по улучшению:</h5>
         <div class="recommendation-item">
@@ -1778,6 +1845,7 @@ document.addEventListener('DOMContentLoaded', function() {
     else if (totalScore < 66) {
       levelElement.textContent = "Средний уровень зрелости проектного управления";
       levelElement.className = "text-center mb-4 text-warning";
+      levelElement.style.cssText = 'color: ' + 'orange' + ' !important;'
       recommendations.innerHTML = `
         <h5 class="fw-bold mb-3">Рекомендации по улучшению:</h5>
         <div class="recommendation-item">
@@ -1797,6 +1865,7 @@ document.addEventListener('DOMContentLoaded', function() {
     else {
       levelElement.textContent = "Высокий уровень зрелости проектного управления";
       levelElement.className = "text-center mb-4 text-success";
+      levelElement.style.cssText = 'color: ' + 'green' + ' !important;'
       recommendations.innerHTML = `
         <h5 class="fw-bold mb-3">Рекомендации по оптимизации:</h5>
         <div class="recommendation-item">
@@ -1858,8 +1927,3 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 </body>
 </html>
-
-
-
-
-
