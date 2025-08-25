@@ -790,7 +790,7 @@ pain-strong {
 <section class="hero" id="home">
   <div class="container text-center" data-aos="fade-up">
     <h1 class="fw-semibold mb-3 display-2 text-shadow">Эффективное управление инвестиционными проектами</h1>
-    <p class="mb-4 fs-2">Проектное управление: инновации для лидеров рынка</p>
+    <p class="mb-3 fs-2">Проектное управление: инновации для лидеров рынка</p>
     <button class="btn btn-primary btn-lg" onclick="scrollToSection('#uslugi')">Хочу узнать детали</button>
  </div>
  <div class="scroll-hint1">
@@ -805,7 +805,7 @@ pain-strong {
         <span class="badge bg-primary-subtle text-primary fw-semibold mb-4">Услуга</span>
         <h1 class="fw-bold mb-0 text-shadow">Комплексное сопровождение проектов в сфере медицины</h1>
         <p class="text-soft mb-4">
-          Ваш цифровой проектный офис
+          Сервис цифрового проектного офиса
         </p>
         
       <a href="#contact" class="text-decoration-none text-dark">
@@ -836,13 +836,13 @@ pain-strong {
               <span class="badge rounded-pill bg-secondary-subtle text-dark fw-bold">2</span>
               <div>
                 <div class="fw-semibold">Контроль сроков реализации проектов</div>
-                <small class="text-soft">Прогноз срыва сроков, формирование временных резервов, контроль выполнения этапов</small>
+                <small class="text-soft">Прогноз срыва сроков, определение и анализ временных резервов, контроль выполнения этапов</small>
               </div>
             </div>
             <div class="d-flex align-items-start gap-3 mb-3">
               <span class="badge rounded-pill bg-secondary-subtle text-dark fw-bold">3</span>
               <div>
-                <div class="fw-semibold"><abbr title="— это процесс минимизации последствий от возникновения рисков. Он включает выявление потенциальных угроз, оценку их влияния и реализацию стратегий, направленных на управление, устранение или ограничение негативных событий">Митигация</abbr> рисков</div>
+                <div class="fw-semibold"> Контроль рисков </div>
                 <small class="text-soft">Выявление рисков, разработка мер по их снижению</small>
               </div>
             </div>
@@ -907,7 +907,7 @@ pain-strong {
       <div class="col-lg-9" data-aos="fade-up">
         <h1 class="fw-bold mb-4 text-shadow">Частые проблемы, с которыми сталкиваются проектные команды</h1>
         <p class="text-soft mb-5">
-          Комплексное сопровождение помогает избежать рисков и повысить эффективность реализации проектов
+          Комплексное сопровождение помогает снизить риски и повысить эффективность реализации проектов
         </p>
         <div class="row g-4">
           <div class="col-md-6" data-aos="fade-right">
@@ -920,7 +920,7 @@ pain-strong {
                   <div>
                     <h5 class="mb-2">Неэффективное планирование</h5>
                     <p class="text-muted small">
-                      Отсутствие чёткого графика работ приводит к задержкам, перерасходу бюджета и потере контроля над проектом.
+                      Отсутствие сетевого графика работ приводит к задержкам, перерасходу бюджета и потере контроля над проектом.
                     </p>
                   </div>
                 </div>
@@ -945,7 +945,7 @@ pain-strong {
                   </div>
                 </div>
                 <p class="pain-text" style="color: rgb(255, 162, 0);">
-                  <pain-strong>Решение:</pain-strong> Разработка мер митигации, постоянный мониторинг рисков и внедрение стратегий снижения их влияния.
+                  <pain-strong>Решение:</pain-strong> Постоянный мониторинг рисков и согласование стратегий реагирования на риски.
                 </p>
               </div>
             </div>
@@ -1233,7 +1233,7 @@ pain-strong {
       <div class="col" data-aos="zoom-in">
         <div class ="card-container">
           <div class="p-4 border rounded-3 h-100">
-            <strong class="d-block mb-3">Проектный офис под ключ</strong>
+            <strong class="d-block mb-3">Создание проектного офиса под ключ</strong>
             <p class="text-muted mb-4">Проектный офис с нуля: проведём вас по пути от разработки методологии до внедрения и запуска ИСУП</p>
             
             <button class="btn btn-outline-primary btn-sm mb-3" type="button" 
@@ -1259,7 +1259,7 @@ pain-strong {
       <div class="col" data-aos="zoom-in" data-aos-delay="100">
         <div class ="card-container">
           <div class="p-4 border rounded-3 h-100">
-            <strong class="d-block mb-3">Цифровой проектный офис</strong>
+            <strong class="d-block mb-3">Сервис цифрового проектного офиса</strong>
             <p class="text-muted mb-4">Удалённое сопровождение проектной деятельности командой исполнителя на собственных мощностях</p>
             
             <button class="btn btn-outline-primary btn-sm mb-3" type="button" 
@@ -1461,7 +1461,10 @@ const toggleTheme = () => {
 
 (() => {
   const saved = localStorage.getItem('theme');
-  if (saved) document.documentElement.dataset.theme = saved;
+  if (saved) {
+    document.documentElement.dataset.theme = saved;
+    updateImagesByTheme();
+  }
 })();
 
 const dots = document.querySelectorAll('.nav-dots button');
@@ -1539,7 +1542,7 @@ document.addEventListener('DOMContentLoaded', () => {
     slidesPerView: 'auto',
     spaceBetween: 20,
     centeredSlides: true,
-    speed: 5000,
+    speed: 10000,
     autoplay: {
         delay: 0,
         disableOnInteraction: false
@@ -1947,6 +1950,3 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 </body>
 </html>
-
-
-
