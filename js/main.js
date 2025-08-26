@@ -57,12 +57,3 @@ function applySystemTheme(){let e=window.matchMedia("(prefers-color-scheme: dark
           <p><strong>Важно:</strong> проявлять активность в экспертных сообществах по проектному управлению, изучать лучшие практики для совершенствования собственной системы</p>
         </div>
       `),document.getElementById("questions-section").style.display="none",document.getElementById("result-section").style.display="block",d()}()}),t.appendChild(r)}),document.documentElement.addEventListener("click",e=>{e.target.onclick&&e.target.onclick.toString().includes("toggleTheme")&&updateChartColors()})}),history.scrollRestoration="manual";var tooltipTriggerList=[].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]')),tooltipList=tooltipTriggerList.map(function(e){return new bootstrap.Tooltip(e,{placement:"left"})});
-fetch('counter.json')
-  .then(r => r.json())
-  .then(data => {
-    const newCount = data.count + 1;
-    document.getElementById('visit-counter').textContent = newCount;
-  })
-  .catch(() => {
-    document.getElementById('visit-counter').textContent = 1;
-  });
