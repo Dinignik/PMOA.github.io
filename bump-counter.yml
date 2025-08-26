@@ -1,0 +1,19 @@
+name: Bump counter
+on:
+  page_build:
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: +1 visit
+        run: |
+          current=$(jq '.count' counter.json)
+          echo "{\"count\": $((current + 1))}" > counter.json
+      - name: Commit & push
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add counter.json
+          git commit -m "Bump visits"
+          git push
