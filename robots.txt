@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pma.openinnovation.ru/sitemap.xml
